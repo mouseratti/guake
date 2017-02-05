@@ -38,11 +38,8 @@ from guake.widgets.widget import GuakeWidget
 logger = logging.getLogger(__name__)
 
 
-class GuakeSettingsWindow(GuakeWidget, Gtk.Window):
-
-    def __init__(self, gtkbuilder, *args, **kwargs):
-        self.show_all()
-        self.connect("delete_event", self.close_handler)
-
-    def close_handler(self, *args):
-        return self.hide() or True
+class GuakeApplicationMenu(GuakeWidget, Gtk.Menu):
+    pass
+    # def __init__(self, gtkbuilder, *args, **kwargs):
+    #     self.attach(Gtk.MenuItem(Gtk.Button("OK")), 1, 2, 1, 2)
+    #     self.show_all()
