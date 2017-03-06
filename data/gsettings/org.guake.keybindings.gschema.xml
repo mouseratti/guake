@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="guake.org">
+  <schema path="/org/guake/keybindings/" id="org.guake.keybindings">
+    <key type="s" name="show-hide-handler-keybinder">
+      <default>"F2"</default>
+      <summary>show/hide terminal</summary>
+      <description>show or hide terminal window; This binding is attached with Keybinder.</description>
+    </key>
+    <key type="s" name="new-page-handler">
+      <default>"F3"</default>
+      <summary>Add page</summary>
+      <description>Add new terminal page</description>
+    </key>
+
+  </schema>
+</schemalist>
