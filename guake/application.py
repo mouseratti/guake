@@ -43,6 +43,7 @@ from guake.logging import setupBasicLogging
 from guake.logging import setupLogging
 from guake.widgets.application_window import GuakeApplicationWindow
 
+from guake.keybindings import GuakeKeybinder
 
 logger = logging.getLogger(__name__)
 
@@ -93,6 +94,5 @@ class GuakeApplication(Gtk.Application):
         builder.add_from_file(appui)
         builder.add_from_file(settingsui)
         self.window = GuakeApplicationWindow(builder, application=self, visible=self.show_on_start)
-        keystr = "F2"
-        Keybinder.init()
-        Keybinder.bind(keystr, self.window.show_hide_handler, "")
+        keybindings = Gio.Settings.new("org.guake.keybindings")
+        GuakeKeybinder(keybindings, self.window)
